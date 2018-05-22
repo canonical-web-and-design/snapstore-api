@@ -1,0 +1,4 @@
+pymacaroons
+requests
+python-openid
+prometheus_client
