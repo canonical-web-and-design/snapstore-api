@@ -1,4 +1,5 @@
 # Snapstore api
+[![Coverage Status](https://coveralls.io/repos/github/canonical-webteam/snapstore-api/badge.svg?branch=master)](https://coveralls.io/github/canonical-webteam/snapstore-api?branch=master)
 
 This module provides functions in python to call the snapstore API. See API here: https://dashboard.snapcraft.io/docs/index.html
 
