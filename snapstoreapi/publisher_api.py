@@ -1,4 +1,4 @@
-import snapstoreapi.authentication as authentication
+import snapstoreapi.authentication.authentication as authentication
 import snapstoreapi.cache as cache
 import os
 from snapstoreapi.exceptions import (
