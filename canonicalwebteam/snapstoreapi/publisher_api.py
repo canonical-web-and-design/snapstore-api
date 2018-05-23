@@ -1,7 +1,10 @@
-import snapstoreapi.authentication.authentication as authentication
-import snapstoreapi.cache as cache
+import canonicalwebteam.snapstoreapi.cache as cache
 import os
-from snapstoreapi.exceptions import (
+
+from canonicalwebteam.snapstoreapi.authentication import (
+    authentication
+)
+from canonicalwebteam.snapstoreapi.exceptions import (
     AgreementNotSigned,
     ApiResponseDecodeError,
     ApiResponseError,

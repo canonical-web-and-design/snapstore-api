@@ -1,6 +1,6 @@
-import snapstoreapi.cache as cache
+import canonicalwebteam.snapstoreapi.cache as cache
 import os
-from snapstoreapi.exceptions import (
+from canonicalwebteam.snapstoreapi.exceptions import (
     ApiResponseDecodeError,
     ApiResponseError,
     ApiResponseErrorList

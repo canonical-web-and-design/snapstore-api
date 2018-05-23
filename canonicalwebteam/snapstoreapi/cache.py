@@ -7,7 +7,7 @@ import requests
 import prometheus_client
 
 # Local packages
-from snapstoreapi.exceptions import (
+from canonicalwebteam.snapstoreapi.exceptions import (
     ApiTimeoutError,
     ApiConnectionError
 )
