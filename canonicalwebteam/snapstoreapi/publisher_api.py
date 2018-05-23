@@ -1,9 +1,7 @@
 import canonicalwebteam.snapstoreapi.cache as cache
 import os
 
-from canonicalwebteam.snapstoreapi.authentication import (
-    authentication
-)
+from canonicalwebteam.snapstoreapi import authentication
 from canonicalwebteam.snapstoreapi.exceptions import (
     AgreementNotSigned,
     ApiResponseDecodeError,
