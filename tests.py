@@ -1,9 +1,9 @@
 import unittest
 import pymacaroons
 import responses
-import snapstoreapi.public_api as public_api
-import snapstoreapi.publisher_api as publisher_api
-import snapstoreapi.exceptions as exceptions
+import canonicalwebteam.snapstoreapi.public_api as public_api
+import canonicalwebteam.snapstoreapi.publisher_api as publisher_api
+import canonicalwebteam.snapstoreapi.exceptions as exceptions
 
 
 # Make sure tests fail on stray responses.
