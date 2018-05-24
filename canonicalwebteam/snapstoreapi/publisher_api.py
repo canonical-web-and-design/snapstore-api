@@ -109,7 +109,7 @@ def get_account(session):
     )
 
     if authentication.is_macaroon_expired(response.headers):
-        raise MacaroonRefreshRequired()
+        raise MacaroonRefreshRequired
 
     return process_response(response)
 
@@ -123,7 +123,7 @@ def get_agreement(session):
     )
 
     if authentication.is_macaroon_expired(agreement_response.headers):
-        raise MacaroonRefreshRequired()
+        raise MacaroonRefreshRequired
 
     return agreement_response.json()
 
@@ -141,7 +141,7 @@ def post_agreement(session, agreed):
     )
 
     if authentication.is_macaroon_expired(agreement_response.headers):
-        raise MacaroonRefreshRequired()
+        raise MacaroonRefreshRequired
 
     return process_response(agreement_response)
 
@@ -159,7 +159,7 @@ def post_username(session, username):
     )
 
     if authentication.is_macaroon_expired(username_response.headers):
-        raise MacaroonRefreshRequired()
+        raise MacaroonRefreshRequired
 
     if username_response.status_code == 204:
         return {}
@@ -179,7 +179,7 @@ def get_publisher_metrics(session, json):
     )
 
     if authentication.is_macaroon_expired(metrics_response.headers):
-        raise MacaroonRefreshRequired()
+        raise MacaroonRefreshRequired
 
     return process_response(metrics_response)
 
@@ -208,7 +208,7 @@ def post_register_name(
         method='POST')
 
     if authentication.is_macaroon_expired(response.headers):
-        raise MacaroonRefreshRequired()
+        raise MacaroonRefreshRequired
 
     return process_response(response)
 
@@ -220,7 +220,7 @@ def get_snap_info(snap_name, session):
     )
 
     if authentication.is_macaroon_expired(response.headers):
-        raise MacaroonRefreshRequired()
+        raise MacaroonRefreshRequired
 
     return process_response(response)
 
@@ -242,7 +242,7 @@ def snap_metadata(snap_id, session, json=None):
     )
 
     if authentication.is_macaroon_expired(metadata_response.headers):
-        raise MacaroonRefreshRequired()
+        raise MacaroonRefreshRequired
 
     return process_response(metadata_response)
 
@@ -277,6 +277,6 @@ def snap_screenshots(snap_id, session, data=None, files=None):
     )
 
     if authentication.is_macaroon_expired(screenshot_response.headers):
-        raise MacaroonRefreshRequired()
+        raise MacaroonRefreshRequired
 
     return process_response(screenshot_response)
