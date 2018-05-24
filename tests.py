@@ -50,7 +50,6 @@ class SimpleTestsApi(unittest.TestCase):
             'macaroon_discharge': discharge.serialize(),
         })
 
-        print(response)
         self.assertEqual(payload, response)
 
     @responses.activate
