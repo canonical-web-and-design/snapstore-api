@@ -4,6 +4,6 @@ services:
   - docker
 
 script:
-  - ./run exec  coverage run  --source=. -m unittest discover tests
+  - ./run test
 after_success:
-  - ./run exec coveralls
+  - ./run exec yarn coveralls
