@@ -1,4 +1,0 @@
-responses==0.9.0
-flake8
-coverage
-pyre-check

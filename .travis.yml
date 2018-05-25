@@ -1,16 +1,9 @@
-dist: xenial
-language: python
-python:
-  - "3.6"
-install:
-  - sudo apt-get update
-  - sudo apt-get install -y libsodium-dev
-  - pip install -r requirements.txt
-  - pip install -r requirements-dev.txt
-  - pip install coveralls
+sudo: required
+
+services:
+  - docker
+
 script:
-  - flake8
-  - pyre
-  - coverage run  --source=. tests.py
+  - ./run exec  coverage run  --source=. -m unittest discover tests
 after_success:
-  - coveralls
+  - ./run exec coveralls
