@@ -4,6 +4,7 @@ import responses
 import canonicalwebteam.snapstoreapi.public_api as public_api
 import canonicalwebteam.snapstoreapi.publisher_api as publisher_api
 import canonicalwebteam.snapstoreapi.exceptions as exceptions
+import canonicalwebteam.snapstoreapi.metrics.metrics as metrics
 
 
 # Make sure tests fail on stray responses.
@@ -87,5 +88,30 @@ class SimpleTestsApi(unittest.TestCase):
             )
 
 
-if __name__ == '__main__':
-    unittest.main()
+class OsMetricTest(unittest.TestCase):
+    def test_build_os_info(self):
+        oses = [
+            {
+                'name': 'test/-',
+                'values': ['0.1']
+            },
+            {
+                'name': 'test2/test',
+                'values': ['0.5', '0.9']
+            }
+        ]
+
+        os_metrics = metrics.OsMetric(
+            None, oses, None, None)
+        expected_result = [
+            {
+                'name': 'test2 test',
+                'value': '0.9'
+            },
+            {
+                'name': 'test',
+                'value': '0.1'
+            }
+        ]
+
+        self.assertEqual(os_metrics.os, expected_result)
