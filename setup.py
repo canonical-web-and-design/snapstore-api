@@ -13,6 +13,7 @@ setup(
     ],
     install_requires=[
         "requests",
+        "pycountry",
         "pymacaroons",
         "python3-openid",
         "prometheus_client",
