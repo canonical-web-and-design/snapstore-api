@@ -15,6 +15,7 @@ setup(
         "requests",
         "pycountry",
         "pymacaroons",
+        "python-dateutil",
         "python3-openid",
         "prometheus_client",
     ],
