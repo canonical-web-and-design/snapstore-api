@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='canonicalwebteam.snapstoreapi',
-    version='0.4.2',
+    version='0.4.3',
     author='Canonical Webteam',
     author_email='thomas.bille@canonical.com',
     url='https://github.com/canonical-webteam/snapstore-api',
