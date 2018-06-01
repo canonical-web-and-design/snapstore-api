@@ -10,6 +10,7 @@ setup(
     description='Snapstore API',
     packages=[
         'canonicalwebteam.snapstoreapi',
+        'canonicalwebteam.snapstoreapi.metrics',
     ],
     install_requires=[
         "requests",
